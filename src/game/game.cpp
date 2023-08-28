@@ -6406,7 +6406,7 @@ bool Game::combatChangeHealth(Creature* attacker, Creature* target, CombatDamage
 						} else {
 							ss << ucfirst(attacker->getNameDescription()) << " healed ";
 							if (attacker == target) {
-								ss << (targetPlayer ? (targetPlayer->getSex() == PLAYERSEX_FEMALE ? "herself" : "himself") : "itself");
+								ss << (targetPlayer ? targetPlayer->getReflexivePronoun() : "itself");
 							} else {
 								ss << target->getNameDescription();
 							}
@@ -6633,8 +6633,7 @@ bool Game::combatChangeHealth(Creature* attacker, Creature* target, CombatDamage
 							if (attacker) {
 								ss << " due to ";
 								if (attacker == target) {
-									ss << (targetPlayer ? (targetPlayer->getSex() == PLAYERSEX_FEMALE ? "her own " : "his own ") : "its own ");
-									ss << attackMsg;
+									ss << (targetPlayer ? targetPlayer->getPossessivePronoun() : "its") << " own attack";
 								} else {
 									ss << "an " << attackMsg << " by " << attacker->getNameDescription();
 								}
@@ -6828,7 +6827,7 @@ void Game::buildMessageAsSpectator(
 			ss << " due to ";
 			if (attacker == target) {
 				if (targetPlayer) {
-					ss << (targetPlayer->getSex() == PLAYERSEX_FEMALE ? "her own attack" : "his own attack");
+					ss << targetPlayer->getPossessivePronoun() << " own attack";
 				} else {
 					ss << "its own attack";
 				}
@@ -7032,7 +7031,7 @@ bool Game::combatChangeMana(Creature* attacker, Creature* target, CombatDamage &
 				spectatorMessage += ucfirst(attacker->getNameDescription());
 				spectatorMessage += " restored ";
 				if (attacker == target) {
-					spectatorMessage += (targetPlayer ? (targetPlayer->getSex() == PLAYERSEX_FEMALE ? "herself" : "himself") : "itself");
+					spectatorMessage += (targetPlayer ? targetPlayer->getReflexivePronoun() : "itself");
 				} else {
 					spectatorMessage += target->getNameDescription();
 				}
@@ -7177,7 +7176,7 @@ bool Game::combatChangeMana(Creature* attacker, Creature* target, CombatDamage &
 					if (attacker) {
 						ss << " due to ";
 						if (attacker == target) {
-							ss << (targetPlayer ? (targetPlayer->getSex() == PLAYERSEX_FEMALE ? "her own attack" : "his own attack") : "its own attack");
+							ss << (targetPlayer ? targetPlayer->getPossessivePronoun() : "its") << " own attack";
 						} else {
 							ss << "an attack by " << attacker->getNameDescription();
 						}
