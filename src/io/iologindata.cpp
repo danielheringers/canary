@@ -398,7 +398,9 @@ void IOLoginData::addVIPEntry(uint32_t accountId, uint32_t guid, const std::stri
 
 	std::ostringstream query;
 	query << "INSERT INTO `account_viplist` (`account_id`, `player_id`, `description`, `icon`, `notify`) VALUES (" << accountId << ',' << guid << ',' << db.escapeString(description) << ',' << icon << ',' << notify << ')';
-	db.executeQuery(query.str());
+	if (!db.executeQuery(query.str())) {
+		g_logger().error("Failed to add VIP entry for account %u. QUERY: %s", accountId, query.str().c_str());
+	}
 }
 
 void IOLoginData::editVIPEntry(uint32_t accountId, uint32_t guid, const std::string &description, uint32_t icon, bool notify) {
@@ -406,13 +408,17 @@ void IOLoginData::editVIPEntry(uint32_t accountId, uint32_t guid, const std::str
 
 	std::ostringstream query;
 	query << "UPDATE `account_viplist` SET `description` = " << db.escapeString(description) << ", `icon` = " << icon << ", `notify` = " << notify << " WHERE `account_id` = " << accountId << " AND `player_id` = " << guid;
-	db.executeQuery(query.str());
+	if (!db.executeQuery(query.str())) {
+		g_logger().error("Failed to edit VIP entry for account %u. QUERY: %s", accountId, query.str().c_str());
+	}
 }
 
 void IOLoginData::removeVIPEntry(uint32_t accountId, uint32_t guid) {
 	std::ostringstream query;
 	query << "DELETE FROM `account_viplist` WHERE `account_id` = " << accountId << " AND `player_id` = " << guid;
-	Database::getInstance().executeQuery(query.str());
+	if (!Database::getInstance().executeQuery(query.str())) {
+		g_logger().error("Failed to remove VIP entry for account %u. QUERY: %s", accountId, query.str().c_str());
+	}
 }
 
 void IOLoginData::addPremiumDays(Player* player, uint32_t addDays) {
@@ -424,7 +430,9 @@ void IOLoginData::addPremiumDays(Player* player, uint32_t addDays) {
 		  << ", `lastday` = " << (((lastDay == 0 || lastDay < getTimeNow()) ? getTimeNow() : lastDay) + (addDays * 86400))
 		  << " WHERE `id` = " << player->getAccount();
 
-	Database::getInstance().executeQuery(query.str());
+	if (!Database::getInstance().executeQuery(query.str())) {
+		g_logger().error("Failed to add premium days to account %u. QUERY: %s", player->getAccount(), query.str().c_str());
+	}
 }
 
 void IOLoginData::removePremiumDays(Player* player, uint32_t removeDays) {
