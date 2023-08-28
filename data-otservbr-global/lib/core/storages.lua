@@ -3003,6 +3003,10 @@ Storage = {
 		OnlineCoinsGain = 150002,
 		OnlineTokensGain = 150003,
 	},
+
+	Waypoints = {
+		Owned = { From = 150100, To = 150300 },
+	},
 }
 
 GlobalStorage = {
