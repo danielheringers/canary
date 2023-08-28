@@ -7,5 +7,6 @@ target_sources(${PROJECT_NAME}_lib PRIVATE
     scheduling/scheduler.cpp
     scheduling/events_scheduler.cpp
     scheduling/dispatcher.cpp
+    scheduling/save_manager.cpp
     zones/zone.cpp
 )

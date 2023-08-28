@@ -30,6 +30,7 @@
 #include "lua/creature/movement.hpp"
 #include "game/scheduling/dispatcher.hpp"
 #include "game/scheduling/scheduler.hpp"
+#include "game/scheduling/save_manager.hpp"
 #include "server/server.hpp"
 #include "creatures/combat/spells.hpp"
 #include "lua/creature/talkaction.hpp"
@@ -395,7 +396,7 @@ void Game::saveGameState() {
 
 	for (const auto &it : players) {
 		it.second->loginPosition = it.second->getPosition();
-		IOLoginData::savePlayer(it.second);
+		IOLoginData::savePlayer(it.second, true);
 	}
 
 	for (const auto &it : guilds) {
@@ -4783,7 +4784,7 @@ void Game::playerQuickLoot(uint32_t playerId, const Position &pos, uint16_t item
 		return;
 	}
 
-	std::lock_guard<std::mutex> lock(player->quickLootMutex);
+	Player::PlayerLock lock(*player);
 	if (!autoLoot) {
 		player->setNextActionTask(nullptr);
 	}
@@ -9801,8 +9802,6 @@ void Game::playerRewardChestCollect(uint32_t playerId, const Position &pos, uint
 		player->canAutoWalk(item->getPosition(), function)) {
 		return;
 	}
-
-	std::lock_guard<std::mutex> lock(player->quickLootMutex);
 
 	ReturnValue returnValue = collectRewardChestItems(player, maxMoveItems);
 	if (returnValue != RETURNVALUE_NOERROR) {
