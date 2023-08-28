@@ -13,6 +13,14 @@ local hazard = Hazard.new({
 
 hazard:register()
 
+-- Magma Bubble's fight is not affected by the hazard system
+local hazardZone = Zone.getByName("hazard.gnomprona-gardens")
+if not hazardZone then
+	return
+end
+hazardZone:subtractArea({ x = 33633, y = 32915, z = 15 }, { x = 33649, y = 32928, z = 15 })
+hazardZone:subtractArea({ x = 33630, y = 32887, z = 15 }, { x = 33672, y = 32921, z = 15 })
+
 local primalPod = MoveEvent()
 
 function primalPod.onStepIn(creature, item, position, fromPosition)
@@ -103,7 +111,7 @@ function primalKill.onKill(_player, creature)
 	end
 
 	-- Plunder patriarch
-	chanceTo = math.random(1, 10000)
+	chanceTo = math.random(1, 100000)
 	if chanceTo <= (points * configManager.getNumber(configKeys.HAZARD_SPAWN_PLUNDER_MULTIPLIER)) then
 		local closestFreePosition = player:getClosestFreePosition(monster:getPosition(), 4, true)
 		local monster = Game.createMonster("Plunder Patriarch", closestFreePosition.x == 0 and monster:getPosition() or closestFreePosition, false, true)
