@@ -395,3 +395,6 @@ vcpkg_installed
 
 # CLION
 cmake-build-debug*
+11/Tibia.dat
+11/Tibia.pic
+11/Tibia.spr
