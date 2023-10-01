@@ -16,3 +16,6 @@ dofile(DATA_DIRECTORY .. "/lib/quests/quest.lua")
 
 -- Vip System library
 dofile(DATA_DIRECTORY .. "/lib/vip/vip_system.lua")
+
+-- Tasks Library
+dofile(DATA_DIRECTORY .. "/lib/others/task_lib.lua")

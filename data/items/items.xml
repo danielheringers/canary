@@ -6163,7 +6163,7 @@
 		<attribute key="transformequipto" value="3090"/>
 		<attribute key="weight" value="90"/>
 	</item>
-	<item id="3054" article="a" name="silver amulet">
+	<item id="3054" article="a" name="silver amulet" > 
 		<attribute key="primarytype" value="amulets and necklaces"/>
 		<attribute key="showCharges" value="1"/>
 		<attribute key="showAttributes" value="1"/>
@@ -7439,8 +7439,11 @@
 	<item id="3285" article="a" name="longsword">
 		<attribute key="primarytype" value="sword weapons"/>
 		<attribute key="weaponType" value="sword"/>
-		<attribute key="attack" value="17"/>
+		<attribute key="slotType" value="two-handed"/>
+		<attribute key="attack" value="28"/>
 		<attribute key="defense" value="14"/>
+		<attribute key="criticalhitdamage" value="10"/>
+		<attribute key="criticalhitchance" value="10"/>
 		<attribute key="weight" value="4200"/>
 	</item>
 	<item id="3286" article="a" name="mace">

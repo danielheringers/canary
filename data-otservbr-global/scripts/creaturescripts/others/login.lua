@@ -57,8 +57,8 @@ function playerLogin.onLogin(player)
 		player:setStorageValue(Storage.PremiumAccount, 1)
 	end
 	-- Premium Ends Teleport to Temple, change addon (citizen) houseless
-	local defaultTown = "Thais" -- default town where player is teleported if his home town is in premium area
-	local freeTowns = { "Ab'Dendriel", "Carlin", "Kazordoon", "Thais", "Venore", "Rookgaard", "Dawnport", "Dawnport Tutorial", "Island of Destiny" } -- towns in free account area
+	local defaultTown = "Canary" -- default town where player is teleported if his home town is in premium area
+	local freeTowns = { "Canary" } -- towns in free account area
 
 	if isPremium(player) == false and table.contains(freeTowns, player:getTown():getName()) == false then
 		local town = player:getTown()

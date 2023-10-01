@@ -287,6 +287,35 @@ function Player.isMage(self)
 	return table.contains({ VOCATION.ID.SORCERER, VOCATION.ID.MASTER_SORCERER, VOCATION.ID.DRUID, VOCATION.ID.ELDER_DRUID }, self:getVocation():getId())
 end
 
+function Player.isSaber(self)
+	return table.contains({ VOCATION.ID.SABER, VOCATION.ID.SABER_LORD }, self:getVocation():getId())
+end
+
+function Player.isAssassin(self)
+	return table.contains({ VOCATION.ID.ASSASSIN, VOCATION.ID.MORTAL_NINJA }, self:getVocation():getId())
+end
+
+function Player.isLancer(self)
+	return table.contains({ VOCATION.ID.LANCER, VOCATION.ID.LANCER_SOULREAPER }, self:getVocation():getId())
+end
+
+function Player.isRider(self)
+	return table.contains({ VOCATION.ID.RIDER, VOCATION.ID.RIDER_RENEGADE }, self:getVocation():getId())
+end
+
+function Player.isCaster(self)
+	return table.contains({ VOCATION.ID.CASTER, VOCATION.ID.CASTER_CELESTIAL }, self:getVocation():getId())
+end
+
+function Player.isBerserker(self)
+	return table.contains({ VOCATION.ID.BERSERKER, VOCATION.ID.BERSERKER_BESTIAL }, self:getVocation():getId())
+end
+
+function Player.isArcher(self)
+	return table.contains({ VOCATION.ID.ARCHER, VOCATION.ID.ARCHER_SENTINEL }, self:getVocation():getId())
+end
+
+
 local ACCOUNT_STORAGES = {}
 function Player.getAccountStorage(self, key, forceUpdate)
 	local accountId = self:getAccountId()

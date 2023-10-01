@@ -5049,6 +5049,10 @@ local weapons = {
 		-- longsword
 		itemid = 3285,
 		type = WEAPON_SWORD,
+		vocation = {
+			{ "Saber", true },
+			{ "Saber Lord" },
+		},
 	},
 	{
 		-- ice rapier

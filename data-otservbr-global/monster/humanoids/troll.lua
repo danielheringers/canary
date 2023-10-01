@@ -17,14 +17,13 @@ monster.raceId = 15
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
+	toKill = 50,
 	FirstUnlock = 10,
-	SecondUnlock = 100,
+	SecondUnlock = 20,
 	CharmsPoints = 5,
 	Stars = 1,
 	Occurrence = 0,
-	Locations = "In many dungeons around Tibia like the troll cave in Thais, south of Carlin (out the east \z
-		exit and down the hole), Island of Destiny, Edron Troll Cave, and in Ab'Dendriel. Also found in Rookgaard.",
+	Locations = "Nos arredores da cidade de Inita. Atraidos pela grande movimentação de humanos ficam a espreita esperando uma oportunidade para atacar os viajantes...",
 }
 
 monster.health = 50
@@ -71,8 +70,8 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, bugs", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
+	{ text = "Hmmm, humanos", yell = false },
+	{ text = "Hmmm, cães", yell = false },
 	{ text = "Grrr", yell = false },
 	{ text = "Groar", yell = false },
 	{ text = "Gruntz!", yell = false },
@@ -80,7 +79,7 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 7950 }, -- rope
-	{ name = "gold coin", chance = 65300, maxCount = 12 },
+	{ name = "gold coin", chance = 95300, maxCount = 32 },
 	{ name = "silver amulet", chance = 80 },
 	{ name = "hand axe", chance = 18000 },
 	{ name = "spear", chance = 13000 },
@@ -94,7 +93,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -15 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -1, maxDamage = -15 },
 }
 
 monster.defenses = {

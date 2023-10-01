@@ -47,8 +47,8 @@ loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
-serverName = "OTServBR-Global"
-serverMotd = "Welcome to the OTServBR-Global!"
+serverName = "Underworld"
+serverMotd = "Welcome to the Underworld!"
 onePlayerOnlinePerAccount = true
 statusTimeout = 5 * 1000
 replaceKickOnLogin = true
@@ -287,7 +287,7 @@ pushWhenAttacking = false
 -- NOTE: If toggleDownloadMap if false, then the mapDownloadUrl will not be used
 -- NOTE: If a map with the name already exists in the world folder, the map will not be downloaded even if the toggleDownloadMap is true
 toggleDownloadMap = true
-mapName = "otservbr"
+mapName = "Custom City"
 mapDownloadUrl = "https://github.com/opentibiabr/canary/releases/download/v1.5.0/otservbr.otbm"
 mapAuthor = "OpenTibiaBR"
 

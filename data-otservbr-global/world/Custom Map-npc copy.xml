@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<npcs>
+	<npc centerx="1067" centery="1033" centerz="6" radius="1">
+		<npc name="God Vkin" x="0" y="0" z="6" spawntime="60" />
+	</npc>
+	<npc centerx="1055" centery="1041" centerz="7" radius="1">
+		<npc name="Bruno Forge Masters" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+</npcs>
