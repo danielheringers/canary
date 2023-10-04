@@ -36,7 +36,6 @@ local function giveRewardToPlayer(player, reward)
     if player:addItem(reward.itemId, reward.count) then
         return true
     else
-        player:sendTextMessage(MESSAGE_STATUS_SMALL, "Voce nao tem espaço suficiente em seu inventario para receber a recompensa.")
         return false
     end
 end

@@ -7448,6 +7448,7 @@
 		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="28"/>
 		<attribute key="defense" value="14"/>
+		<attribute key="attackSpeed" value="500"/>
 		<attribute key="criticalhitdamage" value="10"/>
 		<attribute key="criticalhitchance" value="10"/>
 		<attribute key="weight" value="4200"/>
@@ -12296,7 +12297,8 @@
 		<attribute key="weight" value="100"/>
 	</item>
 	<item id="4844" article="an" name="Danca de Gelo e Fogo">
-		<attribute key="description" value="Contem ensinamentos da arte marcial real especializada em esquiva"/>
+		<attribute key="primarytype" value="books"/>
+		<attribute key="description" value="It contains a collection of beautiful elven poems"/>
 		<attribute key="weight" value="1300"/>
 	</item>
 	<item id="4845" article="a" name="dwarven pickaxe">
