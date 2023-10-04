@@ -1,5 +1,5 @@
 local config = {
-    duration = 7, -- Altere para a duração desejada em segundos
+    duration = 5, -- Altere para a duração desejada em segundos
     rotationsPerSecond = 3, -- Rotações de magia por segundo
 }
 
@@ -256,14 +256,14 @@ spell:id()
 spell:name("Valsa das Laminas")
 spell:words("Valsa das Laminas")
 spell:level(5)
-spell:mana(75)
+spell:mana(1750)
 spell:isPremium(false)
 spell:range(1)
 spell:needCasterTargetOrDirection(false)
 spell:isSelfTarget(true)
 spell:blockWalls(true)
-spell:cooldown(15 * 1000)
-spell:groupCooldown(15 * 1000)
+spell:cooldown(10 * 1000)
+spell:groupCooldown(5 * 1000)
 spell:needLearn(false)
 spell:vocation("saber;true", "saber lord;true")
 spell:register()

@@ -32,4 +32,4 @@ function creatureEvent.onModalWindow(player, modalWindowId, buttonId, choiceId)
 	return true
 end
 
-creatureEvent:register()
+-- creatureEvent:register()

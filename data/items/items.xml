@@ -428,6 +428,8 @@
 	</item>
 	<item id="268" article="a" name="mana potion">
 		<attribute key="primarytype" value="liquids"/>
+		<attribute key="manaticks" value="1000"/>
+        <attribute key="managain" value="500"/>
 		<attribute key="weight" value="270"/>
 	</item>
 	<item id="269" article="a" name="dead dragon hatchling">
@@ -5282,7 +5284,11 @@
 	</item>
 	<item id="2854" article="a" name="backpack">
 		<attribute key="primarytype" value="containers"/>
-		<attribute key="containersize" value="20"/>
+		<attribute key="containersize" value="40"/>
+		<attribute key="healthticks" value="1000"/>
+        <attribute key="healthgain" value="5"/>
+		<attribute key="manaticks" value="1000"/>
+        <attribute key="managain" value="5"/>
 		<attribute key="weight" value="1800"/>
 		<attribute key="imbuementslot" value="1">
 			<attribute key="increase capacity" value="3"/>
@@ -12289,9 +12295,8 @@
 		<attribute key="description" value="It contains some strange symbols of the lizard language"/>
 		<attribute key="weight" value="100"/>
 	</item>
-	<item id="4844" article="an" name="elven poetry book">
-		<attribute key="primarytype" value="books"/>
-		<attribute key="description" value="It contains a collection of beautiful elven poems"/>
+	<item id="4844" article="an" name="Danca de Gelo e Fogo">
+		<attribute key="description" value="Contem ensinamentos da arte marcial real especializada em esquiva"/>
 		<attribute key="weight" value="1300"/>
 	</item>
 	<item id="4845" article="a" name="dwarven pickaxe">
@@ -68908,29 +68913,5 @@
 	<item id="43895" article="a" name="bag you covet">
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="20"/>
-	</item>
-	<item id="44064" article="an" name="training shield">
-		<attribute key="primarytype" value="training weapons"/>
-		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
-	</item>
-	<item id="44065" article="an" name="exercise shield">
-		<attribute key="primarytype" value="exercise weapons"/>
-		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="500"/>
-		<attribute key="weight" value="1000"/>
-	</item>
-	<item id="44066" article="an" name="durable exercise shield">
-		<attribute key="primarytype" value="exercise weapons"/>
-		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="1800"/>
-		<attribute key="weight" value="1000"/>
-	</item>
-	<item id="44067" article="an" name="lasting exercise shield">
-		<attribute key="primarytype" value="exercise weapons"/>
-		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="14400"/>
-		<attribute key="weight" value="1000"/>
 	</item>
 </items>

@@ -15845,10 +15845,8 @@ local items = {
 		type = "equip",
 		slot = "legs",
 		vocation = {
-			{ "Knight", true },
-			{ "Paladin", true, true },
-			{ "Elite Knight" },
-			{ "Royal Paladin" },
+			{ "Saber", true },
+			{ "Saber Lord", true},
 		},
 	},
 	{
@@ -15863,10 +15861,8 @@ local items = {
 		type = "equip",
 		slot = "armor",
 		vocation = {
-			{ "Knight", true },
-			{ "Paladin", true, true },
-			{ "Elite Knight" },
-			{ "Royal Paladin" },
+			{ "Saber", true },
+			{ "Saber Lord", true},
 		},
 	},
 	{
